@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт</title>
+    {% load static %}
+    <link rel="stylesheet" href="static/Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="static/Bootstrap/css/main.css">
+    <link rel="stylesheet" href="static/Bootstrap/css/font-awesome.min.css">
+</head>
+    <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                </button>
+                <a class="navbar-brand" href="{%url 'main'  %}">Welcome!</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    {% block body1 %} <!-- Блок для кнопок -->
+
+                    {% endblock %}
+                </ul>
+            </div>
+        </div>
+    </div>
+<div id="headerwrap">
+    {% block body2 %}<!--Блок для заголовков-->
+
+
+    {% endblock %}
+</div>
+    {% block body3 %}<!--Блок для всего остального-->
+
+
+    {% endblock %}
+</body>
+</html>

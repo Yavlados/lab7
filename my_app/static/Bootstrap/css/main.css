@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee|Play|Oswald');
+
+body {
+    background-color: #f85c37;
+    font-family: "Bungee";
+    font-weight: 300;
+    font-size: 16px;
+    color: #23527c;
+    -webkit-font-smoothing: antialiased;
+
+    margin-top: 70px;
+}
+
+h1, h2, h3, h4, h5 ,h6 {
+    font-family: "Play";
+    font-weight: 300;
+    color: #333333;
+}
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+a {
+    color: #f85c37;
+}
+
+a:hover, a:focus {
+    color: #f0ad4e;
+    text-decoration: none;
+    outline: 0;
+}
+
+li {
+    text-align: center;
+}
+hr{
+    display: block;
+    height: 1px;
+    border:0;
+    border-top:1px solid #ffff00;
+    margin: 1em 0;
+    padding:0;
+}
+.centered{
+    text-align: center;
+}
+.navbar {
+    font-weight: 700;
+    font-size: 14px;
+    background-color: #ffff00;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.navbar-inverse{
+    background: #333333;
+    border-color: #333333;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 20px;
+}
+.navbar-inverse .navbar-nav > .active > a {
+    color: #ff7878;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+#headerwrap{
+   background: url(../../img/header.jpg) no-repeat center top;
+    margin-top: -10px;
+    padding-top: 20px;
+    text-align: center;
+    background-attachment: fixed;
+    background-position: center center;
+    min-height: 1280px;
+}
+
+#headerwrap h1 {
+    margin-top: 100px;
+    color: darkred;
+    font-size: 70px;
+    font-weight:300;
+    letter-spacing: 3px;
+}
+
+#headerwrap h2 {
+    font-family: Oswald ;
+    margin-top: 50px;
+    color: #080808;
+    font-size: 35px;
+    font-weight:300;
+    letter-spacing: 2px;
+}
+.form-block
+{
+    font-family: "Arial";
+}

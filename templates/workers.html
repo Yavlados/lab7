@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+                {% block body1 %}
+                    <li class="active"><a href="{%url 'bd'  %}">DataBase</a></li>
+                    <li><a href="{%url 'orders_url'  %}">Orders</a></li>
+                    <li ><a href="{%url 'login'  %}">Login</a></li>
+                    <li ><a href="{%url 'registration'  %}">registration</a></li>
+                    <li><a href="{%url 'admin:index'  %}"><i class="fa fa-bomb fa-invert" aria-hidden="true"></i></a></li>
+                {% endblock %}
+{% block body2 %}
+<h2>Список работников:</h2>
+    <br><br><br><br>
+      <div class="container">
+<table class="table table-dark">
+
+    <tr>
+      <th scope="col">Имя</th>
+      <th scope="col">Фамилия</th>
+      <th scope="col">Email</th>
+      <th scope="col">Место работы</th>
+      <th scope="col">Адрес работы</th>
+    </tr>
+ {% for worker in object_list %}
+     <tr>
+         <td>{{ worker.name_worker }}</td>
+         <td>{{ worker.lastname_worker}}</td>
+         <td>{{ worker.email_worker}}</td>
+         <td>{{ worker.workplace_worker.name_shop}}</td>
+         <td>{{ worker.workplace_worker.adr_shop}}</td>
+     </tr>
+ {% endfor %}
+</table>
+    </div>
+{% endblock %}
+{% block body3 %}
+
+{% endblock %}

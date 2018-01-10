@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+                {% block body1 %}
+                    <li class="active"><a href="{%url 'bd'  %}">DataBase</a></li>
+                    <li><a href="{%url 'orders_url'  %}">Orders</a></li>
+                    <li ><a href="#">asd</a></li>
+                    <li><a href="#"><i class="fa fa-bomb fa-invert" aria-hidden="true"></i></a></li>
+                {% endblock %}
+{% block body2 %}
+
+<h2>Магазин:</h2>
+    <br><br><br><br>
+      <div class="container">
+<table class="table table-dark">
+
+    <tr>
+      <th scope="col">Тип товара</th>
+       <th scope="col">Название</th>
+    </tr>
+ {% for shop in object_list %}
+     <tr>
+      {% for tovar in shop.get_assort %}
+          <td>{{ tovar.id_tovar }}</td>
+           <td>{{ tovar.name_tovar }}</td>
+           <td>{{ tovar.type_tovar }}</td>
+     {% endfor %}
+     </tr>
+ {% endfor %}
+</table>
+    </div>
+{% endblock %}
+{% block body3 %}
+
+{% endblock %}

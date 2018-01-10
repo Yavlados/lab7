@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+                {% block body1 %}
+                    <li><a href="{%url 'bd'  %}">DataBase</a></li>
+                    <li><a href="{%url 'orders_url'  %}">Orders</a></li>
+                    <li ><a href="{%url 'login'  %}">Login</a></li>
+                    <li class = "active"><a href="{%url 'registration'  %}">registration</a></li>
+                    <li><a href="{%url 'admin:index'  %}"><i class="fa fa-bomb fa-invert" aria-hidden="true"></i></a></li>
+                {% endblock %}
+{% block body2 %}
+    <h1>Моё уважение</h1>
+<meta http-equiv="refresh" content="3; url=/main">
+
+{% endblock %}

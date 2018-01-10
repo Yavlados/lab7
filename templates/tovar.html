@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+                {% block body1 %}
+                    <li class="active"><a href="{%url 'bd'  %}">DataBase</a></li>
+                    <li><a href="{%url 'orders_url'  %}">Orders</a></li>
+                    <li ><a href="{%url 'login'  %}">Login</a></li>
+                    <li ><a href="{%url 'registration'  %}">registration</a></li>
+                    <li><a href="{%url 'admin:index'  %}"><i class="fa fa-bomb fa-invert" aria-hidden="true"></i></a></li>
+                {% endblock %}
+{% block body2 %}
+<h2>Список товаров:</h2>
+    <br><br><br><br>
+      <div class="container">
+<table class="table table-dark">
+
+    <tr>
+      <th scope="col">Артикул</th>
+      <th scope="col">Название</th>
+      <th scope="col">Тип товара</th>
+    </tr>
+ {% for tovar in object_list %}
+     <tr>
+         <td>{{ tovar.id_tovar }}</td>
+         <td>{{ tovar.name_tovar}}</td>
+         <td>{{ tovar.type_tovar}}</td>
+     </tr>
+ {% endfor %}
+</table>
+    </div>
+{% endblock %}
+{% block body3 %}
+
+{% endblock %}

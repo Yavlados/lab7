@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+                {% block body1 %}
+                    <li><a href="{%url 'bd'  %}">DataBase</a></li>
+                    <li class = "active"><a href="{%url 'orders_url'  %}">Orders</a></li>
+                    <li ><a href="{%url 'login'  %}">Login</a></li>
+                    <li ><a href="{%url 'registration'  %}">registration</a></li>
+                    <li><a href="{%url 'admin:index'  %}"><i class="fa fa-bomb fa-invert" aria-hidden="true"></i></a></li>
+                {% endblock %}
+{% block body2 %}
+
+      <div id="header1">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1>Заказы</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div>
+                <ul>
+                    {% for order in data.orders %}
+                        {% include 'order_element.html' with element=order %}
+                    {% empty %}
+                        empty list :(
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
